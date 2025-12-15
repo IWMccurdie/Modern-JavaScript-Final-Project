@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "name": "Summer Music Festival",
+    "location": "Central Park, New York, NY",
+    "date": "2025-06-21",
+    "time": "15:00"
+  },
+  {
+    "id": 2,
+    "name": "Tech Innovators Conference",
+    "location": "Moscone Center, San Francisco, CA",
+    "date": "2025-09-12",
+    "time": "09:00"
+  },
+  {
+    "id": 3,
+    "name": "City Food & Wine Expo",
+    "location": "Navy Pier, Chicago, IL",
+    "date": "2025-08-05",
+    "time": "12:00"
+  },
+  {
+    "id": 4,
+    "name": "Charity 5K Run",
+    "location": "Discovery Green, Houston, TX",
+    "date": "2025-04-18",
+    "time": "07:30"
+  },
+  {
+    "id": 5,
+    "name": "Winter Arts & Crafts Fair",
+    "location": "Convention Center, Seattle, WA",
+    "date": "2025-12-03",
+    "time": "10:00"
+  }
+]

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="site.css">
+    <script src="site.js" defer></script>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">
+      <a href="/">🍔 Food Truck</a>
+    </div>
+    <ul class="nav-links">
+      <li><a href="/">Home</a></li>
+      <li><a href="/#menu">Menu</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li><a href="admin.html">Admin</a></li>
+    </ul>
+  </nav>
+  <main>
+    <div class="container">
+      <h1>Admin Panel</h1>
+      <div id="forms">
+        <div class="menu-card">
+          <form id="addEvent">
+            <h2>Add New Event</h2>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name">
+            <label for="location">Location:</label>          
+            <input type="text" id="location" name="location">
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date">
+            <label for="time">Time:</label>
+            <input type="time" id="time" name="time">
+            <button type="submit">Add Event</button>
+          </form>
+        </div>
+        <div class="menu-card">
+          <form id="addMenuItem">
+            <h2>Add New Menu Item</h2>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name">
+            <label for="description">Description:</label>
+            <textarea type="text" id="description" name="description"></textarea>
+            <label for="price">Price:</label>
+            <input type="text" id="price" name="price">
+            <label for="imageURL">Add Image URL:</label>
+            <input type="text" id="imageURL" name="imageURL">
+            <button type="submit">Add Menu Item</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+  </main>
+</nav>
+</body>
+</html>

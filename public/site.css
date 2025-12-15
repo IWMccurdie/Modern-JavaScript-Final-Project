@@ -1,0 +1,200 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(177, 119, 177);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #d40693; /* nice orange color */
+  padding: 10px 20px;
+  font-family: Arial, sans-serif;
+}
+
+.navbar .logo a {
+  color: rgb(231, 227, 227);
+  text-decoration: none;
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.navbar .nav-links {
+  list-style: none;
+  display: flex;
+  gap: 80px;
+}
+
+.navbar .nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.navbar .nav-links li a:hover {
+  color: #f0bdd6;
+
+ }
+ .container{
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+.menu-container {
+  
+  padding: 50px;
+  background-color: #f9f5ff; 
+}
+
+#forms {
+  display: flex;
+  flex-direction: row;
+  align-items: top center;
+  width: 80%;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  gap: 20px;
+}
+
+/* Card styling */
+.menu-card {
+  background-color: rgb(232, 226, 231);
+  width: 50%;
+  border-radius: 20px; /* rounded corners */
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  text-align: center;
+  padding: 20px;
+  transition: all 0.3s ease;
+  border: 2px solid transparent; /* default border */
+}
+
+/* Image inside card */
+.menu-card img {
+  width: 100%;
+  height: 30rem;
+  object-fit: cover;
+  border-radius: 15px; /* rounded edges for image */
+}
+
+/* Text styling */
+.menu-card h3, .menu-card label {
+  margin: 15px 0 5px;
+  color: #333;
+}
+
+.menu-card p {
+  font-size: 14px;
+  color: #666;
+  min-height: 40px;
+}
+
+.menu-card .price {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+  color: #6b21a8; /* dark purple */
+}
+
+/* Hover effect: lift + border change */
+.menu-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+  border-color: #6b21a8; /* dark purple border */
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: white;
+  font-size: 36px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  margin: auto;
+  border-radius: 30px;
+}
+
+form label {
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+form input, form textarea {
+  margin-bottom: 15px;
+  margin-top: 5px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+form input {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+form textarea {
+  resize: none;
+  height: 150px;
+  width: 400px;
+  margin-bottom: 15px;
+  margin-top: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.menu-card:nth-of-type(1) form input:nth-of-type(2) {
+  margin-bottom: 20px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.menu-card:nth-of-type(2) form input:nth-of-type(2) {
+  margin-bottom: 20px;
+  width: 30%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.menu-card:nth-of-type(2) form input:nth-of-type(3) {
+  margin-bottom: 20px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+button {
+  background-color: #d40693;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+  width: 30%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+button:hover {
+  background-color: #b30575;
+}
