@@ -6,11 +6,12 @@ const port = 3000
 app.use(express.static('public'))
 app.use(express.json())
 
+// Test route
+app.get('/test', (req, res) => res.json({ message: 'Server is working' }))
+
 //routes-backend
-// app.use('/api/v1',require('./routes/api/v1/menu'))
-app.use('/api/v1',require('./routes/api/v1/events'))
-app.use('/api/v1',require('./routes/api/v1/menu'))
-app.use('/',require('./routes/pages/menu'))
+app.use('/api/v1/events',require('./routes/api/v1/events'))
+app.use('/api/v1/menu',require('./routes/api/v1/menu'))
 
 //routes-frontend
 app.use('/',require('./routes/pages/menu'))

@@ -1,8 +1,19 @@
 const router = require('express').Router()
 const { connectDB } = require('../../../config/db')
 
+// GET all events (for testing)
+router.get('/', async (request, response) => {
+    try {
+        const db = await connectDB()
+        const allEvents = await db.collection('events').find({}).toArray()
+        response.json(allEvents)
+    } catch (error) {
+        response.status(500).json({ error: error.message })
+    }
+})
+
 // GET specific event by ID
-router.get('/events/:id', async (request, response) => {
+router.get('/:id', async (request, response) => {
     try {
         const db = await connectDB()
         const found = await db.collection('events').findOne({ id: request.params.id })
@@ -13,9 +24,8 @@ router.get('/events/:id', async (request, response) => {
     }
 })
 
-
 // POST a new event
-router.post('/events', async (req, res) => {
+router.post('/', async (req, res) => {
     try {
         const db = await connectDB()
         const result = await db.collection('events').insertOne(req.body)
@@ -24,6 +34,5 @@ router.post('/events', async (req, res) => {
         res.status(500).json({ error: error.message })
     }
 })
-
 
 module.exports = router

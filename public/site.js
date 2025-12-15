@@ -3,6 +3,7 @@ document.getElementById('addEvent').addEventListener('submit', async (e) => {
     e.preventDefault()
     const formData = new FormData(e.target)
     const data = Object.fromEntries(formData)
+    data.id = Date.now().toString()
     
     try {
         const response = await fetch('/api/v1/events', {
@@ -26,6 +27,7 @@ document.getElementById('addMenuItem').addEventListener('submit', async (e) => {
     e.preventDefault()
     const formData = new FormData(e.target)
     const data = Object.fromEntries(formData)
+    data.id = Date.now().toString()
     
     try {
         const response = await fetch('/api/v1/menu', {

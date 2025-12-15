@@ -2,7 +2,7 @@ const router = require('express').Router()
 const { connectDB } = require('../../../config/db')
 
 // APIs
-router.get('/menu/:id', async (request, response) => {
+router.get('/:id', async (request, response) => {
     try {
         const db = await connectDB()
         const found = await db.collection('menu').findOne({ id: request.params.id })
@@ -14,7 +14,7 @@ router.get('/menu/:id', async (request, response) => {
 })
 
 // Post route
-router.post('/menu', async (req, res) => {
+router.post('/', async (req, res) => {
     try {
         const db = await connectDB()
         const result = await db.collection('menu').insertOne(req.body)
