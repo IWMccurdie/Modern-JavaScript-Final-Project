@@ -1,16 +1,27 @@
-const router=require('express').Router()
+const router = require('express').Router()
+const { connectDB } = require('../../../config/db')
 
+// APIs
+router.get('/menu/:id', async (request, response) => {
+    try {
+        const db = await connectDB()
+        const found = await db.collection('menu').findOne({ id: request.params.id })
+        if (found) return response.send(found)
+        response.status(400).json({ message: "Item on menu not found" })
+    } catch (error) {
+        response.status(500).json({ error: error.message })
+    }
+})
 
-// Get all menu items
+// Post route
+router.post('/menu', async (req, res) => {
+    try {
+        const db = await connectDB()
+        const result = await db.collection('menu').insertOne(req.body)
+        res.json({ _id: result.insertedId, ...req.body })
+    } catch (error) {
+        res.status(500).json({ error: error.message })
+    }
+})
 
-
-
-// GET specific menu item by ID
-
-
-
-// POST a new menu item
-
-
-
-module.exports=router
+module.exports = router
