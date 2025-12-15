@@ -13,6 +13,18 @@ router.get('/:id', async (request, response) => {
     }
 })
 
+// GET route
+router.get('/menu', async (request, response) => {
+    try {
+        const db = await connectDB()
+        const found = await db.collection('menu').find().toArray()
+        if (found) return response.send(found)
+        response.status(400).json({ message: "Menu not found" })
+    } catch (error) {
+        response.status(500).json({ error: error.message })
+    }
+})
+
 // Post route
 router.post('/', async (req, res) => {
     try {
