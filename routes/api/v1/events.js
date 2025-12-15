@@ -13,6 +13,17 @@ router.get('/events/:id', async (request, response) => {
     }
 })
 
+// GET all events
+router.get('/events', async (request, response) => {
+    try {
+        const db = await connectDB()
+        const found = await db.collection('events').find().toArray()
+        if (found) return response.send(found)
+        response.status(400).json({ message: "Events not found" })
+    } catch (error) {
+        response.status(500).json({ error: error.message })
+    }
+})
 
 // POST a new event
 router.post('/events', async (req, res) => {
