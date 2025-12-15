@@ -1,5 +1,5 @@
 const router = require('express').Router()
-const { connectDB } = require('../config/db')
+const { connectDB } = require('../../../config/db')
 
 // APIs
 router.get('/menu/:id', async (request, response) => {
