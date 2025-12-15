@@ -8,7 +8,7 @@ let db
 async function connectDB() {
     if (!db) {
         await client.connect()
-        db = client.db('js-final-project')
+        db = client.db('Food-Truck-DB')
     }
     return db
 }
