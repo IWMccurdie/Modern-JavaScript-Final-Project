@@ -14,7 +14,7 @@ router.get('/:id', async (request, response) => {
 })
 
 // GET route
-router.get('/menu', async (request, response) => {
+router.get('/', async (request, response) => {
     try {
         const db = await connectDB()
         const found = await db.collection('menu').find().toArray()

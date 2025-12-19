@@ -1,6 +1,6 @@
 const { MongoClient } = require('mongodb')
 
-const uri = process.env.MONGODB_URI || 'mongodb+srv://michaelgfrascona:jWFDs3IrCrQA4Nur@js-final-project.mn2osqj.mongodb.net/?appName=JS-Final-Project'
+const uri = process.env.MONGODB_URI ||'mongodb+srv://michaelgfrascona:jWFDs3IrCrQA4Nur@js-final-project.mn2osqj.mongodb.net/Food-Truck-DB?retryWrites=true&w=majority&tls=true'
 const client = new MongoClient(uri)
 
 let db
