@@ -39,9 +39,7 @@ const loadEvents = async () => {
         eventItem.innerHTML =
             `<div class="menu-card">
             <h3>${event.name}</h3>
-            <p>${event.location}</p>
             <span>${event.date}</span>
-            <span>${event.time}</span>
             </div>`
 
         eventContainer.appendChild(eventItem)
