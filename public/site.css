@@ -43,14 +43,17 @@ body{
     display: flex;
     flex-direction: column;
     margin-top: 30px;
-    display: flex;
     justify-content: center;
     align-items: center;
  }
-.menu-container {
-  
+.menu-container,
+.event-container {
   padding: 50px;
-  background-color: #f9f5ff; 
+  background-color: rgb(177, 119, 177);
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
 }
 
 #forms {
@@ -67,7 +70,7 @@ body{
 /* Card styling */
 .menu-card {
   background-color: rgb(232, 226, 231);
-  width: 50%;
+  width: 95%;
   border-radius: 20px; /* rounded corners */
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
